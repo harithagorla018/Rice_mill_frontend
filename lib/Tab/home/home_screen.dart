@@ -5,6 +5,7 @@ import './widgets/header.dart';
 import './widgets/image_card.dart';
 import './widgets/promo_card.dart';
 import './widgets/section.dart';
+import '../order/orderscreen.dart';
 import '../../widgets/app_bottom_navigation.dart';
 import '../../category/category_screen.dart';
 
@@ -19,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => CategoryScreen(),
+        builder: (context) => MyOrderPage(),
       ),
     );
   }

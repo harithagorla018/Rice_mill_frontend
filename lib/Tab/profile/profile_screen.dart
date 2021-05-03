@@ -1,6 +1,7 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:rice_mill_frontend/LoginScreen/Login/constants.dart';
 import 'dart:math';
 import 'package:rice_mill_frontend/Tab/home.dart';
 
@@ -132,22 +133,30 @@ class _MyProfilePageState extends State<MyProfilePage> {
                       ..setEntry(3, 2, 0.001)
                       ..setEntry(0,3,200*val)
                       ..rotateY((pi/6)*val),
-                    child: Scaffold(
+                    child: new Container(
+                      //  width: 100,
+                      margin: EdgeInsets.fromLTRB(50, 0, 0, 0),
+                       decoration: new BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: new BorderRadius.only(
+                        topLeft:  const  Radius.circular(40.0),
+                      bottomLeft: const  Radius.circular(40.0))
+                ),
                     //  profilepage: MyProfilePage(),
                     //  appBar: AppBar(title: Text('Everest'),
-                    //  ),
-                    //  body: Center(
-                    //    child:Column(
-                    //        mainAxisAlignment:MainAxisAlignment.center,
-                    //      children:[
-                    //     Text("Swipe right to open the menu"),
-                    //     ElevatedButton(
-                    //       onPressed:(){},
-                    //       child: Text("press me"),
-                    //      )
-                    //      ],
-                    //    )
-                    //    ),
+                    //  backgroundColor: White,
+                      // body: Center(
+                      //   child:Column(
+                      //       mainAxisAlignment:MainAxisAlignment.center,
+                      //     children:[
+                      //    Text("Swipe right to open the menu"),
+                      //    ElevatedButton(
+                      //      onPressed:(){},
+                      //   child: Text("press me"),
+                      //     )
+                      //     ],
+                      //   )
+                      //  ),
                      ),
                     )
                   );

@@ -15,33 +15,36 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.0.0+1
+version: 4.1.7
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=2.0.0"
+# name: flutter_osc
 
 dependencies:
   flutter:
     sdk: flutter
-  bottom_navy_bar: ^5.6.0
-  flutter_svg: ^0.19.0
-  flutter_rating_bar: ^3.0.1+1
-  # rolling_nav_bar: ^0.0.4
-  dot_navigation_bar: ^0.2.0
-  lipsum: ^1.0.1
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   animated_splash_screen: ^1.1.0
   lottie: ^1.0.1
+  flutter_svg: ^0.19.0
+  flutter_rating_bar: ^3.0.1+1
+  dot_navigation_bar: ^0.2.0
+  fluttertoast: ^8.0.3
+  english_words: ^4.0.0
+  flutter_search_bar: ^2.1.0
+  map: ^0.3.0
+  lipsum: ^1.0.1
   page_transition: ^2.0.1-nullsafety.0
-  # curved_navigation_bar: ^0.3.7
-  # lottie: ^1.0.1
+  http: ^0.12.1
+  flinq: ^1.1.0
+ 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-# bottom_navy_bar: ^6.0.0
+ 
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -54,10 +57,8 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
-  assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+# To add assets to your application, add an assets section, like this:
+assets:
     - assets/Lottie.json
     - assets/splashscreen2.json
     - assets/welcome1.json
@@ -89,9 +90,15 @@ flutter:
     - assets/icons/rice2.svg
     - assets/icons/rice3.svg
     - assets/icons/rice5.svg
-
+    - assets/ricemill.jpg
+    - assets/ricemill2.jpg
+    - assets/ricemill3.jpg
+    - assets/ricemill4.jpg
+    - assets/marker_a.png
+    - assets/marker_b.png
     - assets/ricebag1.png
     - assets/ricebag2.png
+    - assets/ricebag.png
     - assets/ricebag3.jpg
     - assets/icons/tick.svg
     - assets/icons/search.svg
@@ -122,11 +129,8 @@ flutter:
     - assets/images/furniture/items/ezgif.com-crop.png
     - assets/images/furniture/items/CHair 2.png
     - assets/images/furniture/items/chair3.png
-
-    # - assets/background.json
-    # - assets/splashscreen3.json
-
-
+flutter_intl:
+    enabled: true
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -1,13 +1,16 @@
 import 'package:dot_navigation_bar/dot_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:rice_mill_frontend/Tab/home/home_screen.dart';
+import 'package:rice_mill_frontend/Tab/locations/location.dart';
 import './Tab/listofmills/ricemill_screen.dart';
-// import '..';
-// import './Tab/home.dart';
-// import './Tab/list.dart';
-// import './Tab/menu.dart';
+// import './Tab/map/src/core/google_map.dart';
+// import './Tab/map/src/mobile/google_map.state.dart';
+// import './Tab/googlemaps/src/google_map.dart';
+
 import './Tab/profile/profile_screen.dart';
+// import './Tab/locations/location.dart';
 // import './Tab/profile.dart';
+// import 'package:flutter/src/;
 
 void main() {
   runApp(MyApp());
@@ -44,10 +47,15 @@ class _HomeState extends State<Home> {
 
  List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
-    MyProfilePage(),
     RicemillScreen(),
-    // ListPage(),
-    // DonationPage(),
+    Location(),
+    // GoogleMap(),
+    // GoogleMapState(),
+    // _GoogleMapState(),
+    // GoogleMap(),
+    // MethodChannelGoogleMapsFlutter(),
+    // Map(),
+    MyProfilePage(),
   ];
 
   void _handleIndexChanged(int i) {
@@ -103,7 +111,7 @@ class _HomeState extends State<Home> {
 
           /// category
           DotNavigationBarItem(
-            icon: Icon(Icons.category),
+            icon: Icon(Icons.zoom_out_map_outlined),
             selectedColor: Colors.orange[600],
           ),
 
@@ -131,4 +139,4 @@ body:_widgetOptions.elementAt(_page),
   }
 }
 
-enum _SelectedTab { home,location_city ,category, person }
+enum _SelectedTab { home,location_city ,zoom_out_map_outlined, person }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+// import './login.dart';
+import '../Login/login.dart';
 
 
 class SignupPage extends StatelessWidget {
@@ -33,9 +35,9 @@ class SignupPage extends StatelessWidget {
               image: DecorationImage(
                 image: NetworkImage("assets/r1.jpg"),
               fit: BoxFit.cover,
-              colorFilter: 
-      ColorFilter.mode(Colors.black.withOpacity(0.3), 
-      BlendMode.dstATop),
+      //         colorFilter: 
+      // ColorFilter.mode(Colors.black.withOpacity(0.3), 
+      // BlendMode.dstATop),
               )
               ),
           padding: EdgeInsets.symmetric(horizontal: 30),
@@ -69,26 +71,23 @@ class SignupPage extends StatelessWidget {
                   inputFile(label: "Confirm Password ", obscureText: true),
                 ],
               ),
-              Container(
+               Padding(padding:
+                  EdgeInsets.symmetric(horizontal: 30),
+              child:Container(
                 padding: EdgeInsets.only(top: 3, left: 3),
                 decoration:
                 BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
-                    // border: Border(
-                    //   bottom: BorderSide(color: Colors.black),
-                    //   top: BorderSide(color: Colors.black),
-                    //   left: BorderSide(color: Colors.black),
-                    //   right: BorderSide(color: Colors.black),
-
-
-
-                    // )
 
                 ),
                 child: MaterialButton(
                   minWidth: double.infinity,
                   height: 45,
-                  onPressed: () {},
+                  
+                  onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()),
+                  );
+                  },
                   color: Color(0xff673ab7),
                   elevation: 0,
                   shape: RoundedRectangleBorder(
@@ -105,17 +104,30 @@ class SignupPage extends StatelessWidget {
                   ),
                 ),
               ),
+               ),
+               Padding(padding:
+                  EdgeInsets.fromLTRB(0,10,0,0),
+               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+                  // 
                   Text("Already have an account?"),
-                  Text(" Login", style:TextStyle(
+                      GestureDetector(
+                  child:Text(" Login", style:TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 18,
                       color: Colors.deepPurple[600],
 
                   ),
-                  )
+                  
+                  ),
+                  onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()),
+                          );
+                        },
+                       ),
+                  // ),
                 ],
               ),
         

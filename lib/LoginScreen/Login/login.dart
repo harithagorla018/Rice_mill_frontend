@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:rice_mill_frontend/bottombar.dart';
 import 'package:rice_mill_frontend/bottomnav.dart';
+import './signup.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -64,27 +65,7 @@ class LoginPage extends StatelessWidget {
                         BoxDecoration(
                           
                           borderRadius: BorderRadius.circular(50),
-                          // border: Border(
-                          //   bottom: BorderSide(color: Colors.yellowAccent),
-                          //   top: BorderSide(color: Colors.yellowAccent),
-                          //   left: BorderSide(color: Colors.yellowAccent),
-                          //   right: BorderSide(color: Colors.yellowAccent),
-
-                          // ),
-                          // boxShadow: [
-                    // BoxShadow(
-                    //   color: Colors.yellowAccent[200],
-                     
-                    //   blurRadius: 10.0,
-                    //   spreadRadius: 2.0,
-                    // ), //BoxShadow
-                    // BoxShadow(
-                    //   color: Colors.white,
-                    //   offset: const Offset(0.0, 0.0),
-                    //   blurRadius: 0.0,
-                    //   spreadRadius: 0.0,
-                    // ), //BoxShadow
-                  // ],
+                        
                         ),
                       child: MaterialButton(
                         minWidth: double.infinity,
@@ -116,23 +97,36 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                   ),
-
-
+                Padding(padding:
+                  EdgeInsets.fromLTRB(0,10,0,0),
+               ),
                 Row(
+
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text("Don't have an account?"),
-                    Text(" Sign up", style: TextStyle(
+                  children: <Widget>[                      
+                       Text("Don't have an account?"),  
+                       GestureDetector(
+                         child:   Text(" Sign up",
+                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 18,
-                      color: Colors.deepPurple[600],
-                    ),)
+                      color: Colors.deepPurple[600],       
+                    ),        
 
+                    ),  
+                    onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => SignupPage()),
+                          );
+                        },
+                     ),
+                      
                   ],
+
                 ),
+
                 Container(
                   padding: EdgeInsets.only(top: 100),
-                  height: 230,
+                  height: 290,
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage("assets/rice2.jpg"),

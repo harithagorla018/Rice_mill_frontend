@@ -38,7 +38,7 @@ class Fake {
   // ];
 
   static List<String> featured = [
-    'assets/riceitem1.jpg',
+    'assets/ricemill.jpg',
     'assets/riceitem2.jpg',
     'assets/riceitem3.jpg',
     'assets/riceitem4.jpg'
